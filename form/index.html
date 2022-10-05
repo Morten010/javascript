@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <style>
+      #formular {
+        width: 400px;
+        margin: 200px auto;
+        background-color: grey;
+        padding: 20px;
+      }
+      input {
+        margin: 10px;
+        width: 100%;
+      }
+    </style>
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <div id="formular">
+      <div id="result"></div>
+      <form id="form" action="" method="get">
+        <label for="name">Navn</label>
+        <input type="text" name="name" id="navn" />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>

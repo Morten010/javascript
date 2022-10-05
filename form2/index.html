@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form id="userForm" name="userForm">
+      <input type="text" id="inputName" placeholder="Skriv dit navn" /><br />
+      <input
+        type="text"
+        id="inputCity"
+        placeholder="Hvilken by bor du i?"
+      /><br />
+      <input type="text" id="inputAge" placeholder="Hvor gammel er du?" /><br />
+      <button type="button" onclick="saveUserInput()">Gem</button>
+    </form>
+
+    <p>
+      Mit navn er <span id="userName">Srdjan</span>.<br />Jeg bor i
+      <span id="userCity">Jelling</span>. <br />
+      Jeg er <span id="userAge">38</span>år.
+    </p>
+  </body>
+</html>
