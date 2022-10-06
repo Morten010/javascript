@@ -25,19 +25,19 @@ function addToDoList() {
      };
 };
 
-function ShowToDoList() {
+// function ShowToDoList() {
 
-    for(let index = 0; index < userToDoList.length; index++){
+//     for(let index = 0; index < userToDoList.length; index++){
     
-        const newListItem = document.createElement("li");
-        newListItem.innerText = userToDoList[index];
+//         const newListItem = document.createElement("li");
+//         newListItem.innerText = userToDoList[index];
 
-        toDoListUL.appendChild(newListItem);
+//         toDoListUL.appendChild(newListItem);
         
-    };
+//     };
     
-}
-function ShowToDoList() {
+// }
+function ShowToDoList(event) {
 
     for(let index = 0; index < userToDoList.length; index++){
     
