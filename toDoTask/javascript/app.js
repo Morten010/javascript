@@ -16,31 +16,53 @@ function addToDoList() {
 };
 
 function ShowToDoList(task) {
+
     //tjekker om der er noget i parameteren. vis ikke gør noget andet
    if(task != undefined){
-    //indsætter tasken på html dokumentet
-    document.getElementById("toDoList").innerHTML += 
-    `
-    <li>
-        <p>${task}</p>
-        <i class="fa-regular fa-trash-can"></i>
-    </li>
-    ` 
+
+    //laver en list element
+    let taskLI = document.createElement("li")
+    //siger hvad der skal være i list elementet
+    taskLI.innerHTML = `<p>${task}</p> <i class="fa-regular fa-trash-can"></i>`;
+
+    //addEventlistener på list elementet som når trykket fjerne den i array'en og sletter alle items inde i ul'en og putter dem ind der er tilbage igen
+    taskLI.addEventListener("click", (e) => {
+    userToDoList.splice(userToDoList.indexOf(e.target.innerText), 1)
+    document.getElementById("toDoList").innerHTML = "";
+
+        ShowToDoList()
+
+    });
+
+    toDoListUL.appendChild(taskLI);
    }else{
-        //looper gennem om der er allerade er nogle todo task og vis der er indsætter dem alle
+
+        //  looper gennem om der er allerade er nogle todo task og vis der er indsætter dem alle
         for(let index = 0; index < userToDoList.length; index++){
-             //indsætter tasken på html dokumentet
-            document.getElementById("toDoList").innerHTML += 
-            `
-            <li>
-                <p>${userToDoList[index]}</p>
-                <i class="fa-regular fa-trash-can"></i>
-            </li>
-            ` 
+             
+        //indsætter tasken på html dokumentet
+        let taskLI = document.createElement("li")
+
+
+        taskLI.innerHTML = `<p>${userToDoList[index]}</p> <i class="fa-regular fa-trash-can"></i>`;
+
+        taskLI.addEventListener("click", (e) => {
+            userToDoList.splice(userToDoList.indexOf(e.target.innerText), 1)
+            document.getElementById("toDoList").innerHTML = "";
+
+            ShowToDoList()
+        });
+
+        toDoListUL.appendChild(taskLI);
+
         };
 
-   }
+   };
 
-}
+};
 //performer functionen
-ShowToDoList()
+ShowToDoList();
+
+function DeleteTask(){
+console.log("hey")
+}

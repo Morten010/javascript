@@ -77,8 +77,8 @@ ul li{
     flex-wrap: wrap;
     align-items: center;
 }
-ul li i:hover{
-    color: #1d1d1de8;
+ul li:hover{
+    background-color: rgb(231, 155, 55);;
 }
 form{
     margin-bottom: 2rem;
