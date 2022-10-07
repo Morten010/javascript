@@ -6,12 +6,36 @@
     margin: 0;
     box-sizing: border-box;
 }
- 
+ /* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #f2aa4cff;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(173, 120, 52);
+  }
+  ::-webkit-scrollbar-corner{
+    background-color: none;
+  }
+
+
 html {
     font-size: 62.5%;
     font-family: 'Sora', sans-serif;
 }
 h1{
+    margin-top: 5rem;
     font-size: 4rem;
     color: #f2aa4cff;
     text-align: center;
@@ -26,6 +50,7 @@ section{
 
     display: grid;
     place-content: center;
+    
 }
 ul{
     font-size: 1.6rem;
@@ -34,6 +59,11 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    overflow: scroll;
+
+    margin-bottom: 5rem;
+    padding-right: 2rem;
 }
 ul li{
     background-color: #f2aa4cff;
@@ -79,4 +109,14 @@ form button{
     color: #f2aa4cff;
     border: .2rem solid #f2aa4cff;
     border-radius: 0.5rem;
+}
+@media (max-width: 500px) {
+    form, ul{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+    input, button{
+       width: 60%;
+    }
 }
