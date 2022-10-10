@@ -16,7 +16,7 @@ function addToDoList() {
 };
 
 function ShowToDoList(task) {
-
+    //hej nicklas
     //tjekker om der er noget i parameteren. vis ikke gør noget andet
    if(task != undefined){
 
